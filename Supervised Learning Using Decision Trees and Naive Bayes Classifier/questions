@@ -1,0 +1,26 @@
+In this assignment you will practice training and evaluating both a decision tree and a Naive Bayes classifier on the same dataset. The dataset involves predicting whether a credit card application will be approved or rejected based on various attributes of the applicant such as whether the applicant owns a car or not, a property or not, annual income, highest level of education, marital status, and numerous others. The dataset was downloaded from Kaggle using a Google dataset search. Specifically, from https://www.kaggle.com/datasets/rohitudageri/credit-card-details?resource=downloadLinks to an external site.
+
+There are two files under the Files tab involving this dataset: Credit_card.csv and Credit_card_label.csv The former contains the tuples of the predictors (one per row). The latter contains the label of each row in the former. The two files may be joined by Ind_Id, which appears in both.
+
+Broadly speaking, this assignment breaks down into two parts:
+
+Train Naive Bayes and decision tree models and gain insights about what the models have learned.
+Compare the classification accuracy of NBC vs Decision Tree model.
+Train and Inspect Models
+Train a suitable (categorical or multinomial) Naive Bayes Classifier on the entire dataset restricting oneself to the categorical predictors. (Remember to exclude the column Ind_Id which is not a predictor.)
+Output 4 significantly predictive features learned by the model. Report these in your report, together with your reasoning or evidence that they are predictive. In this context, the term "feature" means a particular categorical variable taking on a particular value, e.g. Type Income being Pensioner. In the process you will need to figure out how to quantify how predictive a certain feature is. Document this in your report.
+Train a Gaussian Naive Bayes Classifier on the entire data set with the predictors restricted to be the numeric ones.
+Train a Decision Tree classifier on the full data set. Print the learned tree.  Write a paragraph describing the main insights that one can glean from the learned tree. 
+Use appropriate parameters (if needed) during the training process (call to fit(.)) to ensure that the tree that gets produced is not excessively large. (This may also help with training time.) Concisely explain and report these parameter settings in your report. 
+The tree may be printed as text or graphics.
+Compare Learned Models On Predictive Accuracy
+Do a single random train-test split (50:50) of the data. Train both a Naive Bayes Classifier and a Decision Tree classifier on TRAIN. In your report, explain and describe any settings for hyperparameters you used during the various trainings. Compute the ROC curves of the two classifiers on TEST, interpreting "label=1" as the positive class. Include plots of the ROC curves in your report,  together with a brief explanation of what they reveal.
+
+Tip: For the Naive Bayes classifier portion, since the data has a mix of categorical and numeric predictors you may need to train two models - a Categorical or Multinomial NB and a Gaussian NB on the categorical and numeric predictors respectively - and classify an input by combining predictions from both learned models.
+
+What Machine Learning Toolkit To Use
+
+Scikit learn, Discuss with me if for some reason you are unable to use it. 
+
+What To Submit
+Submit a single PDF file with three sections, Train and Inspect Models, Compare Learned Models for Predictive Accuracy, and an Appendix which has your code respectively. What should go into the first two sections is underlined at various places earlier in this assignment.
