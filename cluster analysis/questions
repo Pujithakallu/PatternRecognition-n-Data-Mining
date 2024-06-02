@@ -1,0 +1,11 @@
+This assignment has two parts:
+
+Part I: Generate synthetic data sets of various scenarios to try out different clustering algorithms (Part II) and gauge how the data scenario impacts clustering quality of specific algorithms. All the data sets below are 2D.
+
+A data set in which there are 4 clusters represented by 2D Gaussians with means m1, m2, m3, m4 and stddevs s1, s2, s3, and s4. You pick the means and the standard deviations for each.
+A data set in which there are 4 highly non-circular clusters. 
+A version of 1 with some outliers added.
+A version of 2 with some outliers added as well as two spherical clusters added.
+Part II: On each of the data sets run K-means clustering for 3 choices of K (you decide which) as well as DBScan for a single suitable choice of hyperparameter settings. Qualitatively compare the clustering results.
+
+Submit a report in PDF.
