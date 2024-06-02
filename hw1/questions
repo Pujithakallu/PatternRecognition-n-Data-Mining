@@ -1,0 +1,18 @@
+The intent is to study the impact of different proximity measures on a number of different types of analyses on a data set. As discussed in class using an appropriate proximity measure is key to various types of analyses, such as clustering, anomaly detection, and supervised classification (e.g. K nearest neighbors).
+
+The data set is the Iris data set. While it is small, it is real data, and the various analyses you do may reveal interesting insights. This data set is available in the Files tab as iris.csv
+
+For each Iris species (see the label column) define the species mean vector as the mean of the vectors of all 4-dimensional points with that label. (Note that the data set has six columns, one is label, and one is id; the rest form the 4 dimensions).
+
+(1 pt) Compute the Euclidean distance between all pairs of "species mean vectors" and report them in a table.
+(1 pt) Same as 1 except that standardize each of the column vectors (of the 4 dimensions first). Use the z-score standardization, i.e. subtract the column vector's mean from the value and divide by the column vector's standard deviation).
+(1 pt) Same as 1 except use Mahalanobis Distance.
+(1 pt) Same as 1 except use Cosine Similarity.
+(1 pt) Same as 1 except use Pearson Correlation.
+(4 pts) You now have five tables. Explain the pros and cons of each of the measures for the purpose of quantifying how similar pairs of species are.
+(3 pts) For each of the species, find if there are outliers in the species. For this purpose compare the 4-dimensional vector of any particular object (row in the csv file) with the 4-dimensional mean vector of the species. Use Mahalanobis Distance as the proximity measure. You will need to choose appropriate thresholds for discerning whether a data point is anomalous or not. Explain how you did this.
+(2 pts) Same as 7 except use Euclidean distance as the proximity measure. Do not standardize the column vectors. You will need to choose appropriate thresholds for discerning whether a data point is anomalous or not. Explain how you did this.
+(2 pts) Analyze your anomaly detection results. Does Mahalanobis distance work better than Euclidean distance? Or the other way around? Or the results are inconclusive?
+(4 pts) Evaluate the efficacy of the following (nearest-neighbors-like) classifier. First calculate the mean vector of each species as described at the beginning of this assignment. Next, for each point in the data set (i.e. row in the csv file restricted to the first 4 columns) predict the species of that point to be the species of the mean vector that is the closest to that point. Use Mahalanobis Distance as the proximity measure. 
+Report your results as a 3-by-3 contingency table T, where T[i][j] is the number of instances in which the true species is i and the predicted species is j.
+Attach a brief interpretation of what this table reveals about how well your classifier has done. Note that we are well aware that this evaluation is being done on the training set; its not meant for drawing conclusions about predictive accuracy, rather only to get an exploratory sense for what the cont9ngency table reveals and what we can conclude from it.
